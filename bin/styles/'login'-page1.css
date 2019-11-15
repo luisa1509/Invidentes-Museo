@@ -1,0 +1,49 @@
+/** { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); }*/
+
+
+* {
+    margin: 0;
+    border-style: hidden;
+    overflow: hidden;
+    user-select: none;
+}
+
+
+
+
+.fondo {
+    height: 100vh;
+    background-color: blue;
+    display: block;
+}
+
+
+
+.imagen {
+    display: block;
+    margin: 0 auto;
+    height: 50%;
+    padding-top: 25vh;
+
+}
+
+.feedback {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(60, 34, 121, 0.685);
+    width: 0;
+    height: 0;
+
+}
