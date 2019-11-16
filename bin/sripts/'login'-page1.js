@@ -10,7 +10,7 @@ var body = document.querySelector(".body")
 var circulo = document.querySelector(".feedback")
 
 function preload() {
-    gameOver=loadSound("./../../data/audios/gameOver.wav")
+    gameOver=loadSound("./../../data/audios/gameOver.mp3")
 }
 
 
