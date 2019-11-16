@@ -16,17 +16,6 @@
     user-select: none;
 }
 
-
-
-
-.fondo {
-    height: 100vh;
-    background-color: blue;
-    display: block;
-}
-
-
-
 .imagen {
     display: block;
     margin: 0 auto;
@@ -34,6 +23,26 @@
     padding-top: 25vh;
 
 }
+
+
+.fondo {
+    height: 100vh;
+    background-color:white;
+    display: block;
+}
+
+.icono {
+    display: block;
+    margin: 0 auto;
+    height: 50%;
+    padding-top: 25vh;
+
+}
+
+
+
+
+
 
 .feedback {
     border-radius: 50%;
