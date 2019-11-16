@@ -3,9 +3,26 @@ let drawHilo = setInterval(draw, 17)
 let cont = 3;
 let sostenido = false;
 let incremento = 0;
+let gameOver;
 
 var body = document.querySelector(".body")
+
 var circulo = document.querySelector(".feedback")
+
+function preload() {
+    gameOver=loadSound("./../../data/audios/gameOver.wav")
+}
+
+
+
+ 
+
+
+
+let recordatorio = setInterval(function () {
+    gameOver.play();
+},10000)
+
 body.addEventListener("pointerdown", mousePresionado)
 body.addEventListener("pointerup", mouseSuelto)
 
@@ -13,7 +30,8 @@ body.addEventListener("pointerup", mouseSuelto)
 
 function mousePresionado() {
     sostenido = true;
-   
+
+ gameOver.stop();
 }
 
 function mouseSuelto() {
@@ -44,3 +62,6 @@ function draw() {
         circulo.style.height = incremento + "px";
     }
 }
+
+
+
