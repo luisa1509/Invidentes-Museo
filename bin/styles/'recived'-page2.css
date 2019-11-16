@@ -16,6 +16,16 @@
     height: 0;
 
 }
+
+.play{
+    position: absolute;
+    margin: 0;
+    padding: 2em;
+    height: 50%;
+    z-index: 5;
+
+
+}
 .imagen {
     position: relative;
     margin: 0;
