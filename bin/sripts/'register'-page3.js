@@ -4,6 +4,9 @@ let cont = 3;
 let sostenido = false;
 let incremento = 0;
 let gameOver;
+let pantalla;
+let Input=new input(p,100,100);
+
 
 var body = document.querySelector(".body")
 
@@ -13,7 +16,9 @@ function preload() {
     gameOver=loadSound("./../../data/audios/gameOver.mp3")
 }
 
-
+function setup(){
+    input=new input();
+}
 
  
 
@@ -61,7 +66,10 @@ function draw() {
         circulo.style.width = incremento + "px";
         circulo.style.height = incremento + "px";
     }
-    
+    //pantalla.paint;
+    //arrayInputs[i].paint();
+  
+   input.pintar();
 }
 
 //inputs
