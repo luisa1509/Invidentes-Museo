@@ -5,7 +5,7 @@ let sostenido = false;
 let incremento = 0;
 let gameOver;
 let pantalla;
-let Input=new input(p,100,100);
+
 
 
 var body = document.querySelector(".body")
@@ -16,11 +16,7 @@ function preload() {
     gameOver=loadSound("./../../data/audios/gameOver.mp3")
 }
 
-function setup(){
-    input=new input();
-}
 
- 
 
 
 
@@ -69,7 +65,7 @@ function draw() {
     //pantalla.paint;
     //arrayInputs[i].paint();
   
-   ScreenLogin.paint();
+   screenLogin.paint();
 }
 
 //inputs
