@@ -1,54 +1,68 @@
 class Input {
-    Input(p, posX, posY) {
-        this.focus = false;
-        this.text = "";
-        this.parent = p;
-        this.posX = posX;
-        this.posY = posY;
-    }
-    pintar() {
-        if (focus) {
-            parent.stroke(255, 0, 0);
-
-        } else {
-            parent.stroke(0);
-        }
-        parent.fill(255);
-        parent.rect(posX, posY, 200, 30);
-
-        parent.fill(0);
-        parent.textSize(16);
-        parent.text(text, posX + 10, posY + 20);
-    }
-    getPosX() {
-        return posX;
-    }
-
-    setPosX(posX) {
-        this.posX = posX;
-    }
-
-    getPosY() {
-        return posY;
-    }
-    setPosY(posY) {
-        this.posY = posY;
-    }
-
-    getFocus() {
-        return focus;
-    }
-
-    setFocus(focus) {
-        this.focus = focus;
-    }
-
-    getText() {
-        return text;
-    }
-
-    setText(text) {
-        this.text = text;
-    }
-
-}
+    focus= new Boolean(false);
+    
+     
+     constructor(posX, posY, focus, text){
+         this.focus= focus;
+         this.text= text;
+         this.posX= posX;
+         this.posY=posY;
+  
+        
+     }
+  
+     input(){
+       this.focus=false;
+       this.text="";
+       
+     }
+  
+     paint(){
+         if(focus==false){
+             stroke(255,0,0);
+         }else{
+             stroke(0);
+         }
+  
+         fill(255);
+         rect(this.posX, this.posY,300,60);
+         
+         fill(0);
+         textSize(20);
+         text(this.text, this.posX+10,this.posY+20);
+     }
+  
+     getPosX(){
+         return this.posX;
+     }
+  
+     setPosX(posX) {
+     this.posX = posX;
+     }
+  
+     getPosY(){
+         return this.posY;
+     }
+  
+     setPosY(posY) {
+     this.posY = posY;
+     }
+  
+     isFocus() {
+     return this.focus;
+     }
+  
+     setFocus(focus) {
+     this.focus = focus;
+   }
+  
+   getText() {
+     return this.text;
+   }
+  
+   setText(text) {
+     this.text = text;
+   }
+  
+  
+  }
