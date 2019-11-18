@@ -63,5 +63,56 @@ function draw() {
     }
 }
 
+//inputs
+
+function LoginScreen(p) {
+    this.app = p;
+    this.arrayInputs = [];
+    this.cambioY = 0;
+
+    for (let i = 0; i < arrayInputs.length; i++) {
+
+        arrayInputs[i] = new Input(p, 200, 250 + cambioY);
+        cambioY += 50;
+    }
+
+}
+
+function pintar() {
+    for (let i = 0; i < arrayInputs.length; i++) {
+        arrayInputs[i].paint();
+    }
+
+}
+
+function focusInputs(mouseX, mouseY) {
+    for (let i = 0; i < arrayInputs.length; i++) {
+        if (mouseX >= arrayInputs[i].getPosX() && mouseX <= arrayInputs[i].getPosX() + 200
+            && mouseY >= arrayInputs[i].getPosY() && mouseY <= arrayInputs[i].getPosY() + 30) {
+            arrayInputs[i].setFocus(true);
+        } else {
+            arrayInputs[i].setFocus(false);
+        }
+    }
+}
+
+function writeTextInput(key) {
+    for (let i = 0; i < arrayInputs.length; i++) {
+        if (arrayInputs[i].isFocus() && arrayInputs[i].getText().length() < 15 && app.keyCode != app.ENTER) {
+            arrayInputs[i].setText(arrayInputs[i].getText() + key);
+        }
+    }
+
+}
+
+function eraseTextInput() {
+    for (let i = 0; i < arrayInputs.length; i++) {
+        if (arrayInputs[i].getText().length() - 1 >= 0) {
+            this.indice = arrayInputs[i].getText().length() - 1;
+            arrayInputs[i].setText(arrayInputs[i].getText().substring(0, indice));
+        }
+    }
+}
+
 
 
