@@ -48,7 +48,7 @@ function contadorHilo() {
     }
 
     if (cont == 0) {
-        document.location.href = "/Invidentes-Museo/bin/views/'recived'-page2.html";
+        document.location.href = "./bin/views/'recived'-page2.html";
 
     }
 
