@@ -61,6 +61,7 @@ function draw() {
         circulo.style.width = incremento + "px";
         circulo.style.height = incremento + "px";
     }
+    
 }
 
 //inputs
