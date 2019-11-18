@@ -69,59 +69,77 @@ function draw() {
     //pantalla.paint;
     //arrayInputs[i].paint();
   
-   input.pintar();
+   ScreenLogin.paint();
 }
 
 //inputs
 
-function LoginScreen(p) {
-    this.app = p;
-    this.arrayInputs = [];
-    this.cambioY = 0;
+class ScreenLogin{
 
-    for (let i = 0; i < arrayInputs.length; i++) {
-
-        arrayInputs[i] = new Input(p, 200, 250 + cambioY);
-        cambioY += 50;
+    constructor(inputArraylist){
+        this.inputArraylist= inputArraylist;
+        this.inputArraylist=[];
+       
+        this.inputArraylist = [];
+        
+        let incrementPosY=0;
+        for(let i=0; i<2; i++) {
+            this.inputArraylist[i] = new Input(258,785+incrementPosY,false,"");
+            incrementPosY+=90;
+        }
+        
+       
+    
     }
-
-}
-
-function pintar() {
-    for (let i = 0; i < arrayInputs.length; i++) {
-        arrayInputs[i].paint();
-    }
-
-}
-
-function focusInputs(mouseX, mouseY) {
-    for (let i = 0; i < arrayInputs.length; i++) {
-        if (mouseX >= arrayInputs[i].getPosX() && mouseX <= arrayInputs[i].getPosX() + 200
-            && mouseY >= arrayInputs[i].getPosY() && mouseY <= arrayInputs[i].getPosY() + 30) {
-            arrayInputs[i].setFocus(true);
-        } else {
-            arrayInputs[i].setFocus(false);
+    
+    
+    paint() {
+        for(let i=0; i<this.inputArraylist.length;i++) {
+            this.inputArraylist[i].paint();
+            //console.log("pintar");
         }
     }
-}
-
-function writeTextInput(key) {
-    for (let i = 0; i < arrayInputs.length; i++) {
-        if (arrayInputs[i].isFocus() && arrayInputs[i].getText().length() < 15 && app.keyCode != app.ENTER) {
-            arrayInputs[i].setText(arrayInputs[i].getText() + key);
+    
+    focusInputs(mouseX, mouseY) {
+        for(let i=0; i<this.inputArraylist.length;i++){
+            if(mouseX>=this.inputArraylist[i].getPosX() && mouseX<= this.inputArraylist[i].getPosX() +200
+                    && mouseY>this.inputArraylist[i].getPosY() && mouseY<= this.inputArraylist[i].getPosY()+30) {
+                this.inputArraylist[i].setFocus(true);
+            }else {
+    
+               this.inputArraylist[i].setFocus(false);
+            }	
+            }
         }
-    }
-
-}
-
-function eraseTextInput() {
-    for (let i = 0; i < arrayInputs.length; i++) {
-        if (arrayInputs[i].getText().length() - 1 >= 0) {
-            this.indice = arrayInputs[i].getText().length() - 1;
-            arrayInputs[i].setText(arrayInputs[i].getText().substring(0, indice));
+    
+    writeTextInput(key) {
+        
+    
+            if(this.inputArraylist[0].isFocus() && this.inputArraylist[0].getText().length<15) {
+                this.inputArraylist[0].setText(this.inputArraylist[0].getText()+ key);
+                }
+    
+            if(this.inputArraylist[1].isFocus() && this.inputArraylist[1].getText().length<15) {
+                    this.inputArraylist[1].setText(this.inputArraylist[1].getText()+ key);
+                    }
+                
+            }
+            
+            
+           
+        
+        
+    eraseTextImput() { 
+        console.log(this)
+        for(let i=0;i< this.inputArraylist.length;i++) {
+            if(this.inputArraylist[i].isFocus() && this.inputArraylist[i].getText().length-1>=0) {
+                let indice= this.inputArraylist[i].getText().length-1;
+                this.inputArraylist[i].setText(this.inputArraylist[i].getText().substring(0,indice));
+                }
+            }
+            
         }
-    }
+        
 }
-
 
 
