@@ -1,4 +1,5 @@
 let contador = setInterval(contadorHilo, 1000)
+let bienvenido;
 let drawHilo = setInterval(draw, 17)
 let cont = 3;
 let sostenido = false;

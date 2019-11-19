@@ -1,4 +1,4 @@
-let contador = setInterval(contadorHilo, 1000)
+//let contador = setInterval(contadorHilo, 1000)
 let drawHilo = setInterval(draw, 17)
 let cont = 3;
 let sostenido = false;
@@ -23,9 +23,7 @@ function preload() {
 
 
 
-let recordatorio = setInterval(function () {
-    gameOver.play();
-}, 10000)
+
 
 body.addEventListener("pointerdown", mousePresionado)
 body.addEventListener("pointerup", mouseSuelto)
@@ -36,22 +34,22 @@ body.addEventListener("click", seguir)
 function pausa() {
     activar=!activar;
 
-    gameOver.pause();
+   
     if (activar == false) {
         boton.src = "../../data/img/pausa.png";
-    
+        gameOver.pause();
 
     }
     if (activar == true) {
         boton.src = "../../data/img/reproducir.png";
-    
+        gameOver.play();
 
     }
 }
 
 function seguir() {
 
-    gameOver.play();
+    
 }
 
 function mousePresionado() {
@@ -63,9 +61,9 @@ function mousePresionado() {
 function mouseSuelto() {
     sostenido = false;
     cont = 3;
-    incremento = 0
-    circulo.style.width = "0px";
-    circulo.style.height = "0px";
+//    incremento = 0
+//    circulo.style.width = "0px";
+//    circulo.style.height = "0px";
 }
 
 function contadorHilo() {
@@ -83,8 +81,8 @@ function contadorHilo() {
 
 function draw() {
     if (sostenido) {
-        incremento += window.innerWidth / 120;
-        circulo.style.width = incremento + "px";
-        circulo.style.height = incremento + "px";
+        //incremento += window.innerWidth / 120;
+        //circulo.style.width = incremento + "px";
+        //circulo.style.height = incremento + "px";
     }
 }
