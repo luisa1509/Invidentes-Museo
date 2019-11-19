@@ -39,9 +39,9 @@ function mousePresionado() {
 function mouseSuelto() {
     sostenido = false;
     cont = 3;
-    incremento = 0
-    circulo.style.width = "0px";
-    circulo.style.height = "0px";
+//    incremento = 0
+//    circulo.style.width = "0px";
+//    circulo.style.height = "0px";
 }
 
 function contadorHilo() {
@@ -50,7 +50,7 @@ function contadorHilo() {
     }
 
     if (cont == 0) {
-        document.location.href = "./bin/views/'recived'-page2.html";
+       // document.location.href = "./bin/views/'recived'-page2.html";
 
     }
 
@@ -59,9 +59,9 @@ function contadorHilo() {
 
 function draw() {
     if (sostenido) {
-        incremento += window.innerWidth/120;
-        circulo.style.width = incremento + "px";
-        circulo.style.height = incremento + "px";
+        //incremento += window.innerWidth/120;
+        //circulo.style.width = incremento + "px";
+        //circulo.style.height = incremento + "px";
     }
 }
 
