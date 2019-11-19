@@ -4,34 +4,60 @@ let cont = 3;
 let sostenido = false;
 let incremento = 0;
 let gameOver;
+let activar = false;
+
 
 var body = document.querySelector(".body")
 
 var circulo = document.querySelector(".feedback")
 
+var boton = document.querySelector(".play")
+
 function preload() {
-    gameOver=loadSound("./../../data/audios/gameOver.mp3")
+    gameOver = loadSound("./../../data/audios/gameOver.mp3")
 }
 
 
 
- 
+
 
 
 
 let recordatorio = setInterval(function () {
     gameOver.play();
-},10000)
+}, 10000)
 
-body.addEventListener("pointerdown",mousePresionado)
-body.addEventListener("pointerup",mouseSuelto)
+body.addEventListener("pointerdown", mousePresionado)
+body.addEventListener("pointerup", mouseSuelto)
+body.addEventListener("click", pausa)
+body.addEventListener("click", seguir)
 
 
+function pausa() {
+    activar=!activar;
+
+    gameOver.pause();
+    if (activar == false) {
+        boton.src = "../../data/img/pausa.png";
+    
+
+    }
+    if (activar == true) {
+        boton.src = "../../data/img/reproducir.png";
+    
+
+    }
+}
+
+function seguir() {
+
+    gameOver.play();
+}
 
 function mousePresionado() {
     sostenido = true;
 
- gameOver.stop();
+    gameOver.stop();
 }
 
 function mouseSuelto() {
@@ -48,7 +74,7 @@ function contadorHilo() {
     }
 
     if (cont == 0) {
-        document.location.href = "./'register'-page3.html";
+        //document.location.href = "./'register'-page3.html";
 
     }
 
@@ -57,7 +83,7 @@ function contadorHilo() {
 
 function draw() {
     if (sostenido) {
-        incremento += window.innerWidth/120;
+        incremento += window.innerWidth / 120;
         circulo.style.width = incremento + "px";
         circulo.style.height = incremento + "px";
     }
