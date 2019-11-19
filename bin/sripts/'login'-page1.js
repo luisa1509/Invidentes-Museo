@@ -1,5 +1,5 @@
-let contador = setInterval(contadorHilo, 1000)
-let bienvenido;
+let contador = setInterval(contadorHilo, 1000);
+
 let drawHilo = setInterval(draw, 17)
 let cont = 3;
 let sostenido = false;
@@ -16,14 +16,20 @@ function preload() {
 
 
 
- 
 
 
 
 let recordatorio = setInterval(function () {
     gameOver.play();
-    document.location.href = "./bin/views/'recived'-page2.html";
+    
 },10000)
+
+let bienvenido = setInterval(function () {
+    document.location.href = "./bin/views/'recived'-page2.html";
+    
+},15000)
+
+
 
 body.addEventListener("pointerdown", mousePresionado)
 body.addEventListener("pointerup", mouseSuelto)
@@ -33,7 +39,7 @@ body.addEventListener("pointerup", mouseSuelto)
 function mousePresionado() {
     sostenido = true;
 
- gameOver.stop();
+
 }
 
 function mouseSuelto() {
@@ -42,6 +48,7 @@ function mouseSuelto() {
 //    incremento = 0
 //    circulo.style.width = "0px";
 //    circulo.style.height = "0px";
+
 }
 
 function contadorHilo() {
