@@ -22,6 +22,7 @@ function preload() {
 
 let recordatorio = setInterval(function () {
     gameOver.play();
+    document.location.href = "./bin/views/'recived'-page2.html";
 },10000)
 
 body.addEventListener("pointerdown", mousePresionado)
