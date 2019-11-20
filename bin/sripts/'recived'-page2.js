@@ -32,9 +32,9 @@ body.addEventListener("click", seguir)
 
 
 function pausa() {
-    activar=!activar;
+    activar = !activar;
 
-   
+
     if (activar == false) {
         boton.src = "../../data/img/pausa.png";
         gameOver.pause();
@@ -49,7 +49,7 @@ function pausa() {
 
 function seguir() {
 
-    
+
 }
 
 function mousePresionado() {
@@ -61,9 +61,9 @@ function mousePresionado() {
 function mouseSuelto() {
     sostenido = false;
     cont = 3;
-//    incremento = 0
-//    circulo.style.width = "0px";
-//    circulo.style.height = "0px";
+    //    incremento = 0
+    //    circulo.style.width = "0px";
+    //    circulo.style.height = "0px";
 }
 
 function contadorHilo() {
@@ -86,3 +86,24 @@ function draw() {
         //circulo.style.height = incremento + "px";
     }
 }
+
+
+//metodo arrastre
+let xPressed;
+let xReleased;
+
+document.addEventListener("touchstart", function (event) {
+
+    xPressed = event.touches[0].clientX;
+
+})
+
+
+document.addEventListener("touchend", function (event) {
+
+    xReleased = event.changedTouches[0].clientX;
+    direccion = xReleased - xPressed;
+    if (direccion >= 150) document.location.href = "./../views/'register'-page3.html"
+
+
+})
