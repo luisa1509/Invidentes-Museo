@@ -14,13 +14,13 @@ var circulo = document.querySelector(".feedback")
 var boton = document.querySelector(".play")
 
 function preload() {
-    gameOver = loadSound("./../../data/audios/gameOver.mp3")
+    gameOver = loadSound("./../../data/audios/Exposicion1.mp3")
 }
 
-
-
-
-
+function setup() {
+    createCanvas(0,0)
+    
+}
 
 
 

@@ -44,3 +44,11 @@
    background-repeat: no-repeat;
    background-size: cover; 
 }
+
+.nombre {
+    margin-top: 20px;
+}
+
+.apellido {
+    margin-top: 40px;
+}

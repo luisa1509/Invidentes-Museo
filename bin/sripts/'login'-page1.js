@@ -11,7 +11,12 @@ var body = document.querySelector(".body")
 var circulo = document.querySelector(".feedback")
 
 function preload() {
-    gameOver=loadSound("./../../data/audios/gameOver.mp3")
+    gameOver=loadSound("./../../data/audios/Bienvenido.mp3")
+}
+
+function setup() {
+    createCanvas(0,0)
+    
 }
 
 
@@ -71,6 +76,8 @@ function draw() {
         //circulo.style.height = incremento + "px";
     }
 }
+
+localStorage.getItem("nombre",valorinput+" ");
 
 
 

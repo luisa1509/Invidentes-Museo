@@ -16,7 +16,9 @@
     user-select: none;
 }
 
-
+.p5Canvas{
+    display: none;
+}
 .feedback {
     border-radius: 50%;
     position: absolute;
