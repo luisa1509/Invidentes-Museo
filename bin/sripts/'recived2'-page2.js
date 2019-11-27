@@ -102,7 +102,7 @@ document.addEventListener("touchstart", function (event) {
 document.addEventListener("touchend", function (event) {
 
     xReleased = event.changedTouches[0].clientX;
-    direccion = xReleased - xPressed;
+    direccion =  xPressed - xReleased;
     if (direccion >= 150) document.location.href = "./../views/'register'-page3.html"
 
 
