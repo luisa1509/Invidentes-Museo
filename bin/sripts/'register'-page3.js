@@ -16,7 +16,7 @@ var nombre = document.querySelector(".nombre")
 
 var apellido = document.querySelector(".apellido")
 
-var boton = document.querySelector(".button")
+var button = document.querySelector(".button")
 
 
 function preload() {
@@ -35,13 +35,13 @@ body.addEventListener("pointerdown", mousePresionado)
 body.addEventListener("pointerup", mouseSuelto)
 
 
-boton.addEventListener("click",function(){
+button.addEventListener("click",function(){
 
     let valorinput = nombre.value;
-    let valorinput2 = apellido.value;
+    //let valorinput2 = apellido.value;
     
 localStorage.setItem("nombre",valorinput+" ");
-localStorage.setItem("nombre",valorinput2+" ");
+//localStorage.setItem("nombre",valorinput2+" ");
 
 
 })
@@ -82,4 +82,6 @@ function draw() {
     }
     
 }
+
+localStorage.getItem("nombre",valorinput+" ");
 
