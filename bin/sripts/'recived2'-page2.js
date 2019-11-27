@@ -14,7 +14,7 @@ var circulo = document.querySelector(".feedback")
 var boton = document.querySelector(".play")
 
 function preload() {
-    gameOver = loadSound("./../../data/audios/Exposicion1.mp3")
+    gameOver = loadSound("./../../data/audios/Exposicion2.mp3")
 }
 
 function setup() {
