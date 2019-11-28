@@ -61,7 +61,7 @@ button.addEventListener("click",function(){
 localStorage.setItem("nombre",valorinput+" ");
 //localStorage.setItem("nombre",valorinput2+" ");
 document.location.href = "./../../index.html";
-
+valores();
 })
 
 function valores(){
