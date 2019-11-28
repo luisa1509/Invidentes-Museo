@@ -54,8 +54,8 @@ function mousePresionado() {
 }
 
 function mouseSuelto() {
-    sostenido = false;
-    cont = 3;
+    //sostenido = false;
+    //cont = 3;
     //incremento = 0
     //circulo.style.width = "0px";
     //circulo.style.height = "0px";
@@ -76,12 +76,30 @@ function contadorHilo() {
 
 function draw() {
     if (sostenido) {
-        incremento += window.innerWidth/120;
-        circulo.style.width = incremento + "px";
-        circulo.style.height = incremento + "px";
+        //incremento += window.innerWidth/120;
+        //circulo.style.width = incremento + "px";
+        //circulo.style.height = incremento + "px";
     }
     
 }
 
+
+//firebase//
+btnTestRegistro.addEventListener("click", function () {
+
+    let nombre = nombreTexto.value;
+    let apellido = apellidoTexto.value;
+console.log(firebase);
+    writeData(nombre,apellido);
+});
+
+function writeData(userName,userSurname){
+
+    firebase.database().ref('users/' + userName).set({
+    nombre : userName,
+    apellido : userSurname,
+    }).push();
+
+}
 localStorage.getItem("nombre",valorinput+" ");
 
