@@ -42,7 +42,7 @@ button.addEventListener("click",function(){
     
 localStorage.setItem("nombre",valorinput+" ");
 //localStorage.setItem("nombre",valorinput2+" ");
-
+document.location.href = "./../../index.html";
 
 })
 
@@ -56,9 +56,9 @@ function mousePresionado() {
 function mouseSuelto() {
     sostenido = false;
     cont = 3;
-    incremento = 0
-    circulo.style.width = "0px";
-    circulo.style.height = "0px";
+    //incremento = 0
+    //circulo.style.width = "0px";
+    //circulo.style.height = "0px";
 }
 
 function contadorHilo() {
@@ -67,7 +67,7 @@ function contadorHilo() {
     }
 
     if (cont == 0) {
-        document.location.href = "./bin/views/'login'-page1.html";
+        //document.location.href = "./bin/views/'login'-page1.html";
 
     }
 
