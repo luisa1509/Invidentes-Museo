@@ -12,15 +12,33 @@ var body = document.querySelector(".body")
 
 var circulo = document.querySelector(".feedback")
 
-var nombre = document.querySelector(".nombre")
 
-var apellido = document.querySelector(".apellido")
 
 var button = document.querySelector(".button")
 
 
+//campos te texto//
+let nombreTexto = document.getElementById("nombreUsuario")
+let apellidoTexto = document.getElementById("apellidoUsuario")
+
+console.log(firebase)
+
 function preload() {
     gameOver=loadSound("./../../data/audios/gameOver.mp3")
+    var firebaseConfig = {
+        apiKey: "AIzaSyB8AgOjSr6X7f4wlQ921Ln2idEQG3ZjU9w",
+        authDomain: "invidentes-museo.firebaseapp.com",
+        databaseURL: "https://invidentes-museo.firebaseio.com",
+        projectId: "invidentes-museo",
+        storageBucket: "invidentes-museo.appspot.com",
+        messagingSenderId: "568836064152",
+        appId: "1:568836064152:web:23182ac6706cb37a7061ed",
+        measurementId: "G-QYLMZEXC6L"
+      };
+    
+      
+    firebase.initializeApp(firebaseConfig);
+
 }
 
 
@@ -45,6 +63,12 @@ localStorage.setItem("nombre",valorinput+" ");
 document.location.href = "./../../index.html";
 
 })
+
+function valores(){
+    if(valorinput=null){
+        alert();
+    }
+}
 
 
 function mousePresionado() {
