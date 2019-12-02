@@ -30,7 +30,7 @@ let recordatorio = setInterval(function () {
 },10000)
 
 let bienvenido = setInterval(function () {
-    document.location.href = "./bin/views/'recived'-page2.html";
+    document.location.href = "./../views/'recived'-page2.html";
     
 },15000)
 
