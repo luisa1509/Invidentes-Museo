@@ -14,7 +14,7 @@ var circulo = document.querySelector(".feedback")
 var boton = document.querySelector(".play")
 
 function preload() {
-    gameOver = loadSound("./../../data/audios/Exposicion2.mp3")
+    gameOver = loadSound("./../../data/audios/Exposicion3.mp3")
 }
 
 function setup() {
@@ -102,8 +102,8 @@ document.addEventListener("touchstart", function (event) {
 document.addEventListener("touchend", function (event) {
 
     xReleased = event.changedTouches[0].clientX;
-    direccion =  xPressed - xReleased;
-    if (direccion >= 150) document.location.href = "./../views/'recived3'-page3.html"
+    direccion = xPressed - xReleased;
+    if (direccion >= 150) document.location.href = "./../views/'recived4'-page4.html"
 
 
 })

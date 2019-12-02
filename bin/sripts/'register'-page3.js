@@ -64,6 +64,9 @@ document.location.href = "./../../index.html";
 valores();
 })
 
+
+    
+
 function valores(){
     if(valorinput=null){
         alert();
