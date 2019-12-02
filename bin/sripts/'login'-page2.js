@@ -22,17 +22,17 @@ function setup() {
 
 
 
-body.addEventListener("click",gameOver);
 
-//let recordatorio = setInterval(function () {
-  //  gameOver.play();
-    
-//},10000)
 
-let bienvenido = setInterval(function () {
-    document.location.href = "./bin/views/'login'-page2.html";
+let recordatorio = setInterval(function () {
+    gameOver.play();
     
 },10000)
+
+let bienvenido = setInterval(function () {
+    document.location.href = "./bin/views/'recived'-page2.html";
+    
+},15000)
 
 
 
@@ -77,7 +77,7 @@ function draw() {
     }
 }
 
-localStorage.getItem("nombre",valorinput+" ");
+
 
 
 
