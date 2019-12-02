@@ -32,7 +32,7 @@ body.addEventListener("click",gameOver);
 let bienvenido = setInterval(function () {
     document.location.href = "./bin/views/'recived'-page2.html";
     
-},15000)
+},30000)
 
 
 
